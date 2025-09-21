@@ -6,7 +6,7 @@
 #    By: psmolin <psmolin@student.42heilbronn.de    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/11 12:51:50 by psmolin           #+#    #+#              #
-#    Updated: 2025/09/21 21:50:57 by psmolin          ###   ########.fr        #
+#    Updated: 2025/09/21 21:48:16 by psmolin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,11 +18,13 @@ SRCS = \
 		main.cpp \
 		ClapTrap.cpp \
 		ScavTrap.cpp \
-		FragTrap.cpp
+		FragTrap.cpp \
+		DiamondTrap.cpp
 HEADERS = \
 		ClapTrap.hpp \
 		ScavTrap.hpp \
-		FragTrap.hpp
+		FragTrap.hpp \
+		DiamondTrap.hpp
 OBJS = $(SRCS:.cpp=.o)
 
 %.o: %.cpp $(HEADERS)

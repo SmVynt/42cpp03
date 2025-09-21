@@ -6,44 +6,23 @@
 /*   By: psmolin <psmolin@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 12:51:32 by psmolin           #+#    #+#             */
-/*   Updated: 2025/09/21 21:50:45 by psmolin          ###   ########.fr       */
+/*   Updated: 2025/09/21 22:11:13 by psmolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
-#include "ScavTrap.hpp"
+#include "ClapTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int	main()
 {
-	FragTrap	sam("Sam");
-	ScavTrap	bob("Bob");
-
-	bob.attack("Tom");
-	bob.takeDamage(2);
-	bob.beRepaired(5);
-	bob.guardGate();
-	sam.beRepaired(10);
-	sam.highFiveGuys();
-	sam.beRepaired(5);
-	sam.takeDamage(50);
-	sam.takeDamage(30);
-	sam.takeDamage(70);
-	sam.takeDamage(60);
-	sam.highFiveGuys();
-
-	ClapTrap* traps[] = {
-		new ClapTrap("Basic"),
-		new ScavTrap("Guardian"),
-		new FragTrap("HighFiver")
-	};
-
-	for (int i = 0; i < 3; i++) {
-		traps[i]->attack("Enemy");
-		traps[i]->takeDamage(10);
-		traps[i]->beRepaired(5);
-	}
-	for (int i = 0; i < 3; i++)
-		delete (traps[i]);
+	DiamondTrap	noone;
+	DiamondTrap	diamond("Daimond");
+	diamond.whoAmI();
+	diamond.attack("Someone");
+	diamond.beRepaired(50);
+	diamond.takeDamage(35);
+	diamond.guardGate();
+	diamond.highFiveGuys();
 	return (0);
 }
 

@@ -1,35 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psmolin <psmolin@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/12 01:04:50 by psmolin           #+#    #+#             */
-/*   Updated: 2025/09/21 21:32:59 by psmolin          ###   ########.fr       */
+/*   Updated: 2025/09/21 20:43:20 by psmolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 
 # include <iostream>
-# include "ClapTrap.hpp"
+# define COL_R	"\033[31m"
+# define COL_G	"\033[32m"
+# define COL_Y	"\033[33m"
+# define COL_B	"\033[34m"
+# define COL_X	"\033[0m"
 
-class FragTrap: public ClapTrap
+class ClapTrap
 {
 	public:
-		FragTrap();
-		FragTrap(std::string name);
-		FragTrap(const FragTrap &other);
-		FragTrap &operator = (const FragTrap &other);
-		~FragTrap();
+		ClapTrap();
+		ClapTrap(std::string name);
+		ClapTrap(const ClapTrap &other);
+		ClapTrap &operator = (const ClapTrap &other);
+		virtual ~ClapTrap();
 
-		void	highFiveGuys() const;
-
-		void		attack(const std::string& target);
-		void		takeDamage(unsigned int amount);
-		void		beRepaired(unsigned int amount);
+		virtual void	attack(const std::string& target);
+		virtual void	takeDamage(unsigned int amount);
+		virtual void	beRepaired(unsigned int amount);
+	protected:
+		std::string		_name;
+		int				_hp;
+		int				_energy;
+		int				_damage;
 };
 
 #endif
