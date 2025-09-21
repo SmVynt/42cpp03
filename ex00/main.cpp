@@ -6,7 +6,7 @@
 /*   By: psmolin <psmolin@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 12:51:32 by psmolin           #+#    #+#             */
-/*   Updated: 2025/09/21 13:13:57 by psmolin          ###   ########.fr       */
+/*   Updated: 2025/09/21 13:25:00 by psmolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int	main()
 	sam.attack("Bob_2");
 	sam.attack("Bob_3");
 	sam.attack("Bob_4");
+	sam.takeDamage(2);
 	sam.beRepaired(5);
 	sam.attack("Bob_5");
 	sam.attack("Bob_6");
@@ -34,6 +35,10 @@ int	main()
 	sam.attack("Bob_8");
 	sam.attack("Bob_9");
 	sam.beRepaired(5);
+	sam.takeDamage(5);
+	sam.takeDamage(3);
+	sam.takeDamage(7);
+	sam.takeDamage(6);
 	return (0);
 }
 
