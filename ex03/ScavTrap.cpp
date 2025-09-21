@@ -6,7 +6,7 @@
 /*   By: psmolin <psmolin@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/12 01:04:45 by psmolin           #+#    #+#             */
-/*   Updated: 2025/09/21 14:15:26 by psmolin          ###   ########.fr       */
+/*   Updated: 2025/09/21 22:30:30 by psmolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ ScavTrap::ScavTrap () : ClapTrap ()
 	_hp = 100;
 	_energy = 50;
 	_damage = 20;
-	std::cout << COL_G "Unnamed ScavTrap created" COL_X << std::endl;
+	std::cout << COL_G "ScavTrap created" COL_X << std::endl;
 };
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)

@@ -6,7 +6,7 @@
 /*   By: psmolin <psmolin@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/12 01:04:45 by psmolin           #+#    #+#             */
-/*   Updated: 2025/09/21 20:30:30 by psmolin          ###   ########.fr       */
+/*   Updated: 2025/09/21 22:30:36 by psmolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ FragTrap::FragTrap () : ClapTrap ()
 	_hp = 100;
 	_energy = 100;
 	_damage = 30;
-	std::cout << COL_G "Unnamed FragTrap created" COL_X << std::endl;
+	std::cout << COL_G "FragTrap created" COL_X << std::endl;
 };
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
