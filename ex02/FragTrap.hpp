@@ -1,42 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psmolin <psmolin@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/12 01:04:50 by psmolin           #+#    #+#             */
-/*   Updated: 2025/09/21 20:44:58 by psmolin          ###   ########.fr       */
+/*   Updated: 2025/09/21 20:45:26 by psmolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
 # include <iostream>
-# define COL_R	"\033[31m"
-# define COL_G	"\033[32m"
-# define COL_Y	"\033[33m"
-# define COL_B	"\033[34m"
-# define COL_X	"\033[0m"
+# include "ClapTrap.hpp"
 
-class ClapTrap
+class FragTrap: public ClapTrap
 {
 	public:
-		ClapTrap();
-		ClapTrap(std::string name);
-		ClapTrap(const ClapTrap &other);
-		ClapTrap &operator = (const ClapTrap &other);
-		virtual ~ClapTrap();
+		FragTrap();
+		FragTrap(std::string name);
+		FragTrap(const FragTrap &other);
+		FragTrap &operator = (const FragTrap &other);
+		~FragTrap();
 
-		virtual void	attack(const std::string& target);
-		virtual void	takeDamage(unsigned int amount);
-		virtual void	beRepaired(unsigned int amount);
-	protected:
-		std::string		_name;
-		int				_hp;
-		int				_energy;
-		int				_damage;
+		void	highFiveGuys() const;
+
+		void		attack(const std::string& target);
+		void		takeDamage(unsigned int amount);
+		void		beRepaired(unsigned int amount);
 };
 
 #endif
