@@ -16,7 +16,7 @@ ClapTrap::ClapTrap () :
 		_name("Unnamed"),
 		_hp(10),
 		_energy(10),
-		_damage(10)
+		_damage(0)
 {
 	std::cout << COL_G "Unnamed ClapTrap created" COL_X << std::endl;
 };
@@ -25,7 +25,7 @@ ClapTrap::ClapTrap(std::string name) :
 		_name(name),
 		_hp(10),
 		_energy(10),
-		_damage(10)
+		_damage(0)
 {
 	std::cout << COL_G "ClapTrap " << name << " created" COL_X << std::endl;
 };

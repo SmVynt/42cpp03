@@ -23,13 +23,13 @@ int	main()
 	bob.beRepaired(5);
 	bob.guardGate();
 	sam.beRepaired(10);
-	sam.highFiveGuys();
+	sam.highFivesGuys();
 	sam.beRepaired(5);
 	sam.takeDamage(50);
 	sam.takeDamage(30);
 	sam.takeDamage(70);
 	sam.takeDamage(60);
-	sam.highFiveGuys();
+	sam.highFivesGuys();
 
 	ClapTrap* traps[] = {
 		new ClapTrap("Basic"),

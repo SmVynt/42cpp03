@@ -89,7 +89,7 @@ void	FragTrap::beRepaired(unsigned int amount) {
 	}
 };
 
-void	FragTrap::highFiveGuys() const
+void	FragTrap::highFivesGuys() const
 {
 	if (_hp > 0)
 	{
