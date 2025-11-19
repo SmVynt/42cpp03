@@ -14,17 +14,17 @@
 
 FragTrap::FragTrap () : ClapTrap ()
 {
-	_hp = 100;
-	_energy = 100;
-	_damage = 30;
+	_hp = FragTrap::_fragHp;
+	_energy = FragTrap::_fragEnergy;
+	_damage = FragTrap::_fragDamage;
 	std::cout << COL_G "FragTrap created" COL_X << std::endl;
 };
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
-	_hp = 100;
-	_energy = 100;
-	_damage = 30;
+	_hp = FragTrap::_fragHp;
+	_energy = FragTrap::_fragEnergy;
+	_damage = FragTrap::_fragDamage;
 	std::cout << COL_G "FragTrap " << name << " created" COL_X << std::endl;
 };
 
@@ -89,7 +89,7 @@ void	FragTrap::beRepaired(unsigned int amount) {
 	}
 };
 
-void	FragTrap::highFiveGuys() const
+void	FragTrap::highFivesGuys() const
 {
 	if (_hp > 0)
 	{

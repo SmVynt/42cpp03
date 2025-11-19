@@ -25,11 +25,15 @@ class FragTrap: virtual public ClapTrap
 		FragTrap &operator = (const FragTrap &other);
 		~FragTrap();
 
-		virtual void	highFiveGuys() const;
+		virtual void	highFivesGuys() const;
 
 		void		attack(const std::string& target);
 		void		takeDamage(unsigned int amount);
 		void		beRepaired(unsigned int amount);
+	protected:
+		static const int	_fragHp = 100;
+		static const int	_fragEnergy = 100;
+		static const int	_fragDamage = 30;
 };
 
 #endif

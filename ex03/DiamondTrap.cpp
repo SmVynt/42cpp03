@@ -16,9 +16,9 @@ DiamondTrap::DiamondTrap ()
 	:ClapTrap("Unnamed_clap_name"), ScavTrap(), FragTrap()
 {
 	_name = "Unnamed";
-	_hp = FragTrap::_hp;
-	_energy = ScavTrap::_energy;
-	_damage = FragTrap::_damage;
+	_hp = FragTrap::_fragHp;
+	_energy = ScavTrap::_scavEnergy;
+	_damage = FragTrap::_fragDamage;
 	std::cout << COL_G "DiamondTrap Unnamed created" COL_X << std::endl;
 };
 
@@ -26,9 +26,9 @@ DiamondTrap::DiamondTrap(std::string name)
 	: ClapTrap(name + "_clap_name"), ScavTrap(), FragTrap()
 {
 	_name = name;
-	_hp = FragTrap::_hp;
-	_energy = ScavTrap::_energy;
-	_damage = FragTrap::_damage;
+	_hp = FragTrap::_fragHp;
+	_energy = ScavTrap::_scavEnergy;
+	_damage = FragTrap::_fragDamage;
 	std::cout << COL_G "DiamondTrap " << name << " created" COL_X << std::endl;
 };
 
@@ -57,19 +57,22 @@ DiamondTrap::~DiamondTrap (){
 };
 
 
+// void	DiamondTrap::attack(const std::string& target) {
+// 	if (_energy > 0)
+// 	{
+// 		_energy-- ;
+// 		std::cout << "DiamondTrap " << _name << COL_B " attacks " COL_X << target;
+// 		std::cout << ", causing " << _damage << " amount of damage!";
+// 		std::cout << std::endl;
+// 	}
+// 	else
+// 	{
+// 		std::cout << COL_R "DiamondTrap " << _name << " is too exhausted to attack ";
+// 		std::cout << target << COL_X << std::endl;
+// 	}
+// };
 void	DiamondTrap::attack(const std::string& target) {
-	if (_energy > 0)
-	{
-		_energy-- ;
-		std::cout << "DiamondTrap " << _name << COL_B " attacks " COL_X << target;
-		std::cout << ", causing " << _damage << " amount of damage!";
-		std::cout << std::endl;
-	}
-	else
-	{
-		std::cout << COL_R "DiamondTrap " << _name << " is too exhausted to attack ";
-		std::cout << target << COL_X << std::endl;
-	}
+	ScavTrap::attack(target);
 };
 
 void	DiamondTrap::takeDamage(unsigned int amount) {
@@ -118,7 +121,7 @@ void	DiamondTrap::guardGate() const
 	}
 }
 
-void	DiamondTrap::highFiveGuys() const
+void	DiamondTrap::highFivesGuys() const
 {
 	if (_hp > 0)
 	{

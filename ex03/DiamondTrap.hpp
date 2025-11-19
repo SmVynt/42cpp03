@@ -27,13 +27,13 @@ class DiamondTrap: public ScavTrap, public FragTrap
 		~DiamondTrap();
 
 		void			whoAmI();
+		// using			ScavTrap::attack;
+		void			attack(const std::string& target);
+		void			takeDamage(unsigned int amount);
+		void			beRepaired(unsigned int amount);
 
-		void		highFiveGuys() const;
-		void		guardGate() const;
-		void		attack(const std::string& target);
-		void		takeDamage(unsigned int amount);
-		void		beRepaired(unsigned int amount);
-
+		void			highFivesGuys() const;
+		void			guardGate() const;
 	private:
 		std::string		_name;
 };

@@ -14,17 +14,17 @@
 
 ScavTrap::ScavTrap () : ClapTrap ()
 {
-	_hp = 100;
-	_energy = 50;
-	_damage = 20;
+	_hp = ScavTrap::_scavHp;
+	_energy = ScavTrap::_scavEnergy;
+	_damage = ScavTrap::_scavDamage;
 	std::cout << COL_G "ScavTrap created" COL_X << std::endl;
 };
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
-	_hp = 100;
-	_energy = 50;
-	_damage = 20;
+	_hp = ScavTrap::_scavHp;
+	_energy = ScavTrap::_scavEnergy;
+	_damage = ScavTrap::_scavDamage;
 	std::cout << COL_G "ScavTrap " << name << " created" COL_X << std::endl;
 };
 

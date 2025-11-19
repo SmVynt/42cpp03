@@ -32,6 +32,10 @@ class ClapTrap
 		virtual void	attack(const std::string& target);
 		virtual void	takeDamage(unsigned int amount);
 		virtual void	beRepaired(unsigned int amount);
+
+		int				getHitPoints() const;
+		int				getEnergyPoints() const;
+		int				getAttackDamage() const;
 	protected:
 		std::string		_name;
 		int				_hp;
