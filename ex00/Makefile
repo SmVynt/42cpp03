@@ -6,12 +6,12 @@
 #    By: psmolin <psmolin@student.42heilbronn.de    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/09/11 12:51:50 by psmolin           #+#    #+#              #
-#    Updated: 2025/09/21 12:31:37 by psmolin          ###   ########.fr        #
+#    Updated: 2025/11/21 17:35:04 by psmolin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = clap
-CXX = g++
+CXX = c++
 RM = rm -f
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRCS = \
