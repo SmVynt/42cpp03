@@ -6,7 +6,7 @@
 /*   By: psmolin <psmolin@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/12 01:04:45 by psmolin           #+#    #+#             */
-/*   Updated: 2025/09/21 22:19:11 by psmolin          ###   ########.fr       */
+/*   Updated: 2025/11/25 12:46:50 by psmolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,21 +56,6 @@ DiamondTrap::~DiamondTrap (){
 	std::cout << COL_Y "DiamondTrap " << _name << " destroyed" COL_X << std::endl;
 };
 
-
-// void	DiamondTrap::attack(const std::string& target) {
-// 	if (_energy > 0)
-// 	{
-// 		_energy-- ;
-// 		std::cout << "DiamondTrap " << _name << COL_B " attacks " COL_X << target;
-// 		std::cout << ", causing " << _damage << " amount of damage!";
-// 		std::cout << std::endl;
-// 	}
-// 	else
-// 	{
-// 		std::cout << COL_R "DiamondTrap " << _name << " is too exhausted to attack ";
-// 		std::cout << target << COL_X << std::endl;
-// 	}
-// };
 void	DiamondTrap::attack(const std::string& target) {
 	ScavTrap::attack(target);
 };

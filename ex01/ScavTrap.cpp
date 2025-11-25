@@ -6,7 +6,7 @@
 /*   By: psmolin <psmolin@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/12 01:04:45 by psmolin           #+#    #+#             */
-/*   Updated: 2025/09/21 14:15:26 by psmolin          ###   ########.fr       */
+/*   Updated: 2025/11/25 12:52:41 by psmolin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,11 @@ ScavTrap::~ScavTrap (){
 };
 
 void	ScavTrap::attack(const std::string& target) {
+	if (_hp <= 0)
+	{
+		std::cout << COL_R "ScavTrap is dead and can't attack" COL_X << std::endl;
+		return ;
+	}
 	if (_energy > 0)
 	{
 		_energy-- ;
